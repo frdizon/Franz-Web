@@ -10,7 +10,7 @@ const BranchPanelComponent: FC<IBranchPanelComponent> = ({ children }) => {
     return (
         <Container>
             <BranchHeader>
-                <img src={briefCaseLogo} className="logo" alt="Vite logo" />
+                <img src={briefCaseLogo} alt="Vite logo" />
                 <h1>Professional Experience</h1>
             </BranchHeader>
             <StyledTopmostLine branchColorTheme='skyblue' />

@@ -2,19 +2,29 @@ import { FC, ReactNode } from 'react';
 import { ContentContainer, HeaderContainer, HeaderDetailsContainer } from './styles';
 import Fork from '../BranchLines/Fork';
 import Line from '../BranchLines/Line';
+import smLogo from '../../../../assets/SM_logo.svg';
+import Logo, { ILogoProps } from '../Logo/Logo';
 
 interface ISubBranchPanelProps {
     timeFrame: string;
     title: string;
     subTitle: string;
+    logoDetails: ILogoProps;
     children: ReactNode;
 }
 
-const SubBranchPanel: FC<ISubBranchPanelProps> = ({timeFrame, title, subTitle, children}) => {
+const SubBranchPanel: FC<ISubBranchPanelProps> = ({timeFrame, title, subTitle, logoDetails, children}) => {
     return (
         <div>
             <HeaderContainer>
                 <Fork stroke='skyblue' />
+                <Logo 
+                    src={logoDetails.src}
+                    alt={logoDetails.alt}
+                    heightCss={logoDetails.heightCss}
+                    topCss={logoDetails.topCss}
+                    leftCss={logoDetails.leftCss}
+                />
                 <HeaderDetailsContainer branchColorTheme='skyblue'>
                     <div>
                         <h3>{timeFrame}</h3>

@@ -5,6 +5,7 @@ export const HeaderContainer = styled.div`
     width: 100%;
     display: flex;
     padding: 0 24px;
+    position: relative;
 `;
 
 export const HeaderDetailsContainer = styled.div<{branchColorTheme: string}>`
