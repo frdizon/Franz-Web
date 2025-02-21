@@ -29,11 +29,3 @@ export const ContentContainer = styled.div`
   height: fit-content;
   width: 100%;
 `;
-
-export const TempContent = styled.div`
-  height: 500px;
-  border-radius: 4px;
-  background-color: gray;
-  flex: 1;
-  margin: 12px;
-`;

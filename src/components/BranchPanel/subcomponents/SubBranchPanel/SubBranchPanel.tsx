@@ -6,7 +6,6 @@ import {
 } from "./styles";
 import Fork from "../BranchLines/Fork";
 import Line from "../BranchLines/Line";
-import smLogo from "../../../../assets/SM_logo.svg";
 import Logo, { ILogoProps } from "../Logo/Logo";
 
 interface ISubBranchPanelProps {
