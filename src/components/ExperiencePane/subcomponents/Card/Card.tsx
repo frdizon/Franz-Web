@@ -7,14 +7,15 @@ import {
 } from "./styles";
 
 interface ICardProps {
+  imageComponent?: ReactNode;
   children?: ReactNode;
 }
 
-const Card: FC<ICardProps> = ({ children }) => {
+const Card: FC<ICardProps> = ({ imageComponent, children, ...rest }) => {
   return (
-    <Container>
+    <Container {...rest}>
       <ImageContainer>
-        <ImagePlaceholder />
+        {imageComponent !== undefined ? imageComponent : <ImagePlaceholder />}
       </ImageContainer>
       <ContentContainer>{children}</ContentContainer>
     </Container>

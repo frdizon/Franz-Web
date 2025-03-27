@@ -13,6 +13,8 @@ interface ISubBranchPanelProps {
   title: string;
   subTitle: string;
   logoDetails: ILogoProps;
+  branchColorTheme: string;
+  nextBranchColor?: string;
   children: ReactNode;
 }
 
@@ -21,12 +23,14 @@ const SubBranchPanel: FC<ISubBranchPanelProps> = ({
   title,
   subTitle,
   logoDetails,
+  branchColorTheme,
+  nextBranchColor = branchColorTheme,
   children,
 }) => {
   return (
     <div>
-      <HeaderContainer>
-        <Fork stroke="skyblue" />
+      <HeaderContainer branchColorTheme={branchColorTheme}>
+        <Fork id={title} stroke={branchColorTheme} />
         <Logo
           src={logoDetails.src}
           alt={logoDetails.alt}
@@ -34,7 +38,7 @@ const SubBranchPanel: FC<ISubBranchPanelProps> = ({
           topCss={logoDetails.topCss}
           leftCss={logoDetails.leftCss}
         />
-        <HeaderDetailsContainer branchColorTheme="skyblue">
+        <HeaderDetailsContainer branchColorTheme={branchColorTheme}>
           <div>
             <h3>{timeFrame}</h3>
           </div>
@@ -47,7 +51,10 @@ const SubBranchPanel: FC<ISubBranchPanelProps> = ({
         </HeaderDetailsContainer>
       </HeaderContainer>
       <ContentContainer>
-        <Line branchColorTheme="skyblue" />
+        <Line
+          branchColorTheme={branchColorTheme}
+          branchTransitionToColor={nextBranchColor}
+        />
         {children}
       </ContentContainer>
     </div>

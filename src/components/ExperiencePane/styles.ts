@@ -14,4 +14,10 @@ export const Container = styled.div`
   ul {
     padding: 0 24px;
   }
+
+  @media (max-width: 600px) {
+    flex-flow: column;
+    margin: 12px 0;
+    border-radius: 0;
+  }
 `;

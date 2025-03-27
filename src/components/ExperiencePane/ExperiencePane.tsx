@@ -5,8 +5,8 @@ interface IExperiencePaneProps {
   children?: ReactNode;
 }
 
-const ExperiencePane: FC<IExperiencePaneProps> = ({ children }) => {
-  return <Container>{children}</Container>;
+const ExperiencePane: FC<IExperiencePaneProps> = ({ children, ...rest }) => {
+  return <Container {...rest}>{children}</Container>;
 };
 
 export default ExperiencePane;

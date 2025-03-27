@@ -7,15 +7,16 @@ export const Container = styled.div`
   max-width: 1280px;
 
   margin: 0 auto;
-  border: 1px solid blue;
+  border-left: 1px solid blue;
+  border-right: 1px solid blue;
 `;
 
-export const BranchHeader = styled.div`
+export const BranchHeader = styled.div<{ branchColorTheme: string }>`
   display: flex;
 
   align-items: center;
   h1 {
-    color: skyblue;
+    color: #f8e5d7;
     margin-left: 28px;
   }
 `;

@@ -8,7 +8,7 @@ const HelloWorld: FC = () => {
         <p>
           <span>Hello World!</span>&nbsp;<span>I'm Franz Stewart Dizon</span>
         </p>
-        <p>A front end developer who specializes in React</p>
+        <p>A software developer who specializes in React</p>
       </TextContainer>
       <ProfilePictureConainer />
     </Container>

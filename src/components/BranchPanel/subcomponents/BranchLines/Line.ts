@@ -1,9 +1,19 @@
 import styled from "styled-components";
 
-const Line = styled.div<{ branchColorTheme: string }>`
-  // height: 100%;
+const Line = styled.div<{
+  branchColorTheme: string;
+  branchTransitionToColor?: string;
+}>`
   width: 1px;
+  min-width: 1px;
   background-color: ${({ branchColorTheme }) => branchColorTheme};
+  background: linear-gradient(
+    180deg,
+    ${({ branchColorTheme }) => branchColorTheme} 95%,
+    ${({ branchTransitionToColor, branchColorTheme }) =>
+        branchTransitionToColor ? branchTransitionToColor : branchColorTheme}
+      100%
+  );
 `;
 
 export default Line;

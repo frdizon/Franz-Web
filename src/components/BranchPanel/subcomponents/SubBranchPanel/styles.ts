@@ -1,15 +1,22 @@
 import styled from "styled-components";
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.div<{ branchColorTheme: string }>`
   height: fit-content;
   width: 100%;
   display: flex;
   padding: 0 24px;
   position: relative;
+  overflow: clip;
+  svg {
+    path {
+      stroke: ${({ branchColorTheme }) => branchColorTheme};
+    }
+  }
 `;
 
 export const HeaderDetailsContainer = styled.div<{ branchColorTheme: string }>`
   height: fit-content;
+  width: calc(100% - 175px);
   position: relative;
   top: 97px;
   left: 75px;
@@ -28,4 +35,8 @@ export const ContentContainer = styled.div`
   padding: 0 24px;
   height: fit-content;
   width: 100%;
+
+  @media (max-width: 600px) {
+    padding: 0;
+  }
 `;
