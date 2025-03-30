@@ -15,12 +15,14 @@ import {
   BigCardInfo,
   InfoCard,
   CenteredTextContainer,
+  StyledBigCardImg,
 } from "./styles";
 import briefCaseLogo from "../../assets/fluent_briefcase_48.svg";
 import samsungHqSrc from "../../assets/samsungHq4-3.jpg";
 import algoSrc from "../../assets/algo4-3.jpg";
 import smCmsSrc from "../../assets/sm-login-extended.jpg";
 import reactToNextSrc from "../../assets/reactToNext2-1.jpg";
+import samsungNetworkingSrc from "../../assets/Samsung_Analytics_img.jpg";
 
 const Experience: FC = () => {
   return (
@@ -81,6 +83,10 @@ const Experience: FC = () => {
       >
         <GridExperiencePane>
           <BigCard>
+            <StyledBigCardImg
+              src={samsungNetworkingSrc}
+              alt="SM CMS Login visualization"
+            />
             <BigCardInfo>
               <InfoCard gridCol={1} gridRow="1">
                 <CenteredTextContainer>
