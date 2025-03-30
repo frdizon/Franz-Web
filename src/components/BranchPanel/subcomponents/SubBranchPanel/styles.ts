@@ -6,7 +6,7 @@ export const HeaderContainer = styled.div<{ branchColorTheme: string }>`
   display: flex;
   padding: 0 24px;
   position: relative;
-  overflow: clip;
+  align-items: center;
   svg {
     path {
       stroke: ${({ branchColorTheme }) => branchColorTheme};
@@ -18,7 +18,6 @@ export const HeaderDetailsContainer = styled.div<{ branchColorTheme: string }>`
   height: fit-content;
   width: calc(100% - 175px);
   position: relative;
-  top: 97px;
   left: 75px;
 
   h1,
@@ -27,6 +26,18 @@ export const HeaderDetailsContainer = styled.div<{ branchColorTheme: string }>`
   }
   h3 {
     color: #d5c1b6;
+  }
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 24px;
+    }
+    h2 {
+      font-size: 18px;
+    }
+    h3 {
+      font-size: 16px;
+    }
   }
 `;
 

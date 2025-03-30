@@ -16,13 +16,18 @@ import {
   InfoCard,
   CenteredTextContainer,
 } from "./styles";
-import reactToJsLogoSrc from "../../assets/reactToNextJs.webp";
+import briefCaseLogo from "../../assets/fluent_briefcase_48.svg";
+import samsungHqSrc from "../../assets/samsungHq4-3.jpg";
+import algoSrc from "../../assets/algo4-3.jpg";
+import smCmsSrc from "../../assets/sm-login-extended.jpg";
+import reactToNextSrc from "../../assets/reactToNext2-1.jpg";
 
 const Experience: FC = () => {
   return (
     <BranchPanel
       headerTitle="Professional Experience"
       branchColorTheme="skyblue"
+      iconLogo={<img src={briefCaseLogo} alt="Briefcase logo" />}
     >
       <SubBranchPanel
         timeFrame="August 2024 to Present"
@@ -32,7 +37,11 @@ const Experience: FC = () => {
         branchColorTheme="skyblue"
       >
         <ExperiencePane>
-          <Card>
+          <Card
+            imageComponent={
+              <img src={smCmsSrc} alt="SM CMS Login visualization" />
+            }
+          >
             <h3>Frontend Development (ReactJS)</h3>
             <ul>
               <li>
@@ -48,7 +57,7 @@ const Experience: FC = () => {
           <Card
             imageComponent={
               <img
-                src={reactToJsLogoSrc}
+                src={reactToNextSrc}
                 alt="Visualization of migration from ReactJs to NextJs"
               />
             }
@@ -114,6 +123,9 @@ const Experience: FC = () => {
           </BigCard>
           <StyledCard
             cardMediaQueryValues={SMSNG_CARDS_MEDIAQUERY_VALUES.CARD1}
+            imageComponent={
+              <img src={samsungHqSrc} alt="An image of me at Samsung HQ." />
+            }
           >
             <div>
               Was sent to Samsung Headquarters at South Korea for close
@@ -122,6 +134,7 @@ const Experience: FC = () => {
           </StyledCard>
           <StyledCard
             cardMediaQueryValues={SMSNG_CARDS_MEDIAQUERY_VALUES.CARD2}
+            imageComponent={<img src={algoSrc} alt="Algorithm visualization" />}
           >
             <div>
               Passed internal Certification for Algorithms (Professional level)

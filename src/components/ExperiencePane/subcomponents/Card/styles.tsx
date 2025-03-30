@@ -9,30 +9,10 @@ export const Container = styled.div`
 
   display: flex;
   flex-direction: column;
-
-  @media (max-width: 768px) {
-    > div:first-child {
-      height: 180px;
-    }
-  }
-
-  @media (max-width: 600px) {
-    flex: unset;
-    height: fit-content;
-
-    >div: first-child {
-      flex: unset;
-      height: 224px;
-    }
-    >div: last-child {
-      flex: unset;
-      height: fit-content;
-    }
-  }
 `;
 
 export const ImageContainer = styled.div`
-  height: 224px;
+  height: fit-content;
   overflow: clip;
   border-radius: 4px 4px 0 0;
   > img {

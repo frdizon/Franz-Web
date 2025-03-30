@@ -7,6 +7,8 @@ export const Container = styled.div`
   padding: 18px 12px;
   background-color: #988f88;
   border-radius: 8px;
+  z-index: 1;
+  box-shadow: 0px 0px 32px #30393e;
 
   display: flex;
   gap: 16px;

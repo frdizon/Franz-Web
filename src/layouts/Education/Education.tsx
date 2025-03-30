@@ -4,7 +4,11 @@ import SubBranchPanel from "../../components/BranchPanel/subcomponents/SubBranch
 import ExperiencePane from "../../components/ExperiencePane/ExperiencePane";
 import Card from "../../components/ExperiencePane/subcomponents/Card/Card";
 import { DLSU_LOGO_DETAILS, UST_LOGO_DETAILS } from "./constants";
-import ustEvosys from "../../assets/ust_evosys.jpg";
+import ustEvosys from "../../assets/ust_evosys2-1.jpg";
+import bookLogo from "../../assets/fluent_book_48.svg";
+import gradImageSrc from "../../assets/me_grad2-1.jpg";
+import presentinImageSrc from "../../assets/Presenting2-1.jpg";
+import analyticsImageSrc from "../../assets/dengue_analytics.jpg";
 
 const Education: FC = () => {
   return (
@@ -12,6 +16,7 @@ const Education: FC = () => {
       headerTitle="Educational Background"
       branchColorTheme="lightgreen"
       endingBranchColor="yellow"
+      iconLogo={<img src={bookLogo} alt="Book logo" />}
       isLastPanel
     >
       <SubBranchPanel
@@ -23,26 +28,44 @@ const Education: FC = () => {
         nextBranchColor="yellow"
       >
         <ExperiencePane>
-          <Card>
-            <h3>Frontend Developer (ReactJS)</h3>
+          <Card
+            imageComponent={
+              <img src={presentinImageSrc} alt="Me presenting at PCSC 2024" />
+            }
+          >
+            <h3>Presented a paper on a local conference.</h3>
             <ul>
               <li>
-                Developed and maintained features for internal web tools
-                supporting the SM Malls Online App.
+                A short paper containing the results of my master's thesis
+                titled{" "}
+                <i>
+                  Performance of various protein representations for predicting
+                  phage-host interaction
+                </i>
+                , was presented during the{" "}
+                <i>24th Philippine Computing Science Congress</i>.
               </li>
               <li>
-                Addressed UI styling inconsistencies to improve user experience.
+                The paper can be accessed on the{" "}
+                <a
+                  href="https://pcsc.dlsu.edu.ph/proceedings/main-conference/21.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  PCSC website
+                </a>
+                .
               </li>
-              <li>Resolved Snyk-reported vulnerabilities issues.</li>
             </ul>
           </Card>
-          <Card>
-            <h3>Frontend Developer (NextJs)</h3>
+          <Card
+            imageComponent={
+              <img src={gradImageSrc} alt="Me during graduation." />
+            }
+          >
+            <h3>Graduated with high grades</h3>
             <ul>
-              <li>
-                Spearheaded the migration initiative from using the old ReactJs
-                version to using NextJs for building the internal webtools.
-              </li>
+              <li>Achieved a cumulative GPA of 3.750 out of 4.000.</li>
             </ul>
           </Card>
         </ExperiencePane>
@@ -80,7 +103,11 @@ const Education: FC = () => {
               </li>
             </ul>
           </Card>
-          <Card>
+          <Card
+            imageComponent={
+              <img src={analyticsImageSrc} alt="Visualizing analytics." />
+            }
+          >
             <h3>Thesis writing</h3>
             <ul>
               <li>

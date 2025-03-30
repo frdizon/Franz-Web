@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 80%;
+  height: 80vh;
   max-height: 800px;
   min-height: 560px;
   width: 100%;
-  border: 1px solid orange;
+  border-bottom: 1px solid orange;
 
   display: flex;
   justify-content: center;
@@ -25,11 +25,23 @@ export const TextContainer = styled.div`
     color: #f8bd97;
     font-weight: 700;
   }
+  > p:last-child {
+    margin-top: 28px;
+    font-size: 18px;
+    color: #d5c1b6;
+  }
 `;
 
 export const ProfilePictureConainer = styled.div`
   height: 400px;
-  width: 320px;
-  background-color: #faefeb;
-  border: 2px solid #988f88;
+  width: auto;
+  box-shadow:
+    0 0 2px rgba(0, 0, 0, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.14);
+
+  > img {
+    height: 100%;
+    width: auto;
+    border-radius: 4px;
+  }
 `;

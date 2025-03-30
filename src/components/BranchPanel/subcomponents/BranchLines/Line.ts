@@ -14,6 +14,11 @@ const Line = styled.div<{
         branchTransitionToColor ? branchTransitionToColor : branchColorTheme}
       100%
   );
+
+  @media (max-width: 600px) {
+    position: relative;
+    left: 24px;
+  }
 `;
 
 export default Line;

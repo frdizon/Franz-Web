@@ -45,16 +45,8 @@ export const StyledCard = styled(Card)<{
   grid-row: ${({ cardMediaQueryValues }) =>
     cardMediaQueryValues.LARGE.GRID_ROW};
 
-  height: 320px;
-  > div:first-child {
-    flex: 1;
-  }
   > div:last-child {
-    height: 120px;
-    min-height: 120px;
-    flex: unset;
-    display: flex;
-    align-items: center;
+    margin: 12px 0;
   }
 
   @media (max-width: 1280px) {
