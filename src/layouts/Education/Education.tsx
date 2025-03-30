@@ -63,7 +63,7 @@ const Education: FC = () => {
               <img src={gradImageSrc} alt="Me during graduation." />
             }
           >
-            <h3>Graduated with high grades</h3>
+            <h3>Graduated with good grades</h3>
             <ul>
               <li>Achieved a cumulative GPA of 3.750 out of 4.000.</li>
             </ul>
