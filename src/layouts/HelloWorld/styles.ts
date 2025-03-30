@@ -51,6 +51,9 @@ export const TextContainer = styled.div`
     span {
       font-size: 18px;
     }
+    > p:last-child {
+      font-size: 16px;
+    }
   }
 `;
 
