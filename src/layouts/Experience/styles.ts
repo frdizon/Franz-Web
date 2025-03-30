@@ -23,18 +23,26 @@ export const BigCard = styled.div`
   grid-column: 1 / 3;
   grid-row: 1 / 3;
   background-color: black;
-  background-image: url("src/assets/Samsung_Analytics_img.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
   border-radius: 4px;
+  overflow: hidden;
 
   display: flex;
   align-items: flex-end;
+
+  position: relative;
 
   @media (max-width: 600px) {
     grid-column: 1;
     grid-row: 1 / 4;
   }
+`;
+
+export const StyledBigCardImg = styled.img`
+  height: auto;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
 `;
 
 export const StyledCard = styled(Card)<{
