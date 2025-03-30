@@ -5,12 +5,19 @@ export const Container = styled.div`
   max-height: 800px;
   min-height: 560px;
   width: 100%;
-  border-bottom: 1px solid orange;
+  background-color: #1a1f24;
+
+  position: sticky;
+  top: 0;
 
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 24px;
+
+  @media (max-width: 600px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 export const TextContainer = styled.div`
@@ -30,6 +37,21 @@ export const TextContainer = styled.div`
     font-size: 18px;
     color: #d5c1b6;
   }
+
+  @media (max-width: 900px) {
+    > p,
+    span {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 600px) {
+    > p,
+    span {
+      font-size: 18px;
+    }
+  }
 `;
 
 export const ProfilePictureConainer = styled.div`
@@ -43,5 +65,13 @@ export const ProfilePictureConainer = styled.div`
     height: 100%;
     width: auto;
     border-radius: 4px;
+  }
+
+  @media (max-width: 900px) {
+    height: 300px;
+  }
+
+  @media (max-width: 600px) {
+    height: 250px;
   }
 `;

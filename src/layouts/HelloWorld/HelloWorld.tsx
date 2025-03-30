@@ -10,7 +10,7 @@ const HelloWorld: FC = () => {
           <span>Hello World!</span>&nbsp;<span>I'm Franz Stewart Dizon</span>
         </p>
         <p>A software developer who specializes in React</p>
-        <p>frdizon@live.com | +64 977 853 3503</p>
+        <p>frdizon@live.com | +63 977 853 3503</p>
       </TextContainer>
       <ProfilePictureConainer>
         <img src={photoOfMeSrc} alt="A photo of me." />

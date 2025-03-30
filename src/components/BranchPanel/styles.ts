@@ -1,6 +1,14 @@
 import styled from "styled-components";
 import Line from "./subcomponents/BranchLines/Line";
 
+export const ScrollContainer = styled.div`
+  background-color: #30393e;
+  margin: 0 auto;
+
+  position: relative;
+  z-index: 1;
+`;
+
 export const Container = styled.div`
   height: fit-content;
   width: 100%;
